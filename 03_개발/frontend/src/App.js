@@ -6,6 +6,7 @@ import InfoMng0400 from './pages/InfoMng0400';
 import PrchsSlip0100 from './pages/PrchsSlip0100';
 import SlsSlip0100 from './pages/SlsSlip0100';
 import DdlnMng0100 from './pages/DdlnMng0100';
+import SysMenu0200 from './pages/SysMenu0200';
 
 function App() {
   const [activeMenu, setActiveMenu] = useState('INFO-MNG-0200');
@@ -24,6 +25,8 @@ function App() {
         return <SlsSlip0100 />;
       case 'DDLN-MNG-0100':
         return <DdlnMng0100 />;
+      case 'SYS-MENU-0200':
+        return <SysMenu0200 />;
       default:
         return <div>메뉴를 선택해주세요.</div>;
     }
@@ -71,6 +74,12 @@ function App() {
             onClick={() => setActiveMenu('DDLN-MNG-0100')}
           >
             일/월 마감 관리
+          </li>
+          <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('SYS-MENU-0200') }}
+            onClick={() => setActiveMenu('SYS-MENU-0200')}
+          >
+            메뉴 등록 관리
           </li>
         </ul>
       </div>
