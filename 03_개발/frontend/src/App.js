@@ -5,6 +5,7 @@ import InfoMng0300 from './pages/InfoMng0300';
 import InfoMng0400 from './pages/InfoMng0400';
 import PrchsSlip0100 from './pages/PrchsSlip0100';
 import SlsSlip0100 from './pages/SlsSlip0100';
+import DdlnMng0100 from './pages/DdlnMng0100';
 
 function App() {
   const [activeMenu, setActiveMenu] = useState('INFO-MNG-0200');
@@ -21,6 +22,8 @@ function App() {
         return <PrchsSlip0100 />;
       case 'SLS-SLIP-0100':
         return <SlsSlip0100 />;
+      case 'DDLN-MNG-0100':
+        return <DdlnMng0100 />;
       default:
         return <div>메뉴를 선택해주세요.</div>;
     }
@@ -62,6 +65,12 @@ function App() {
             onClick={() => setActiveMenu('SLS-SLIP-0100')}
           >
             매출전표등록
+          </li>
+          <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('DDLN-MNG-0100') }}
+            onClick={() => setActiveMenu('DDLN-MNG-0100')}
+          >
+            일/월 마감 관리
           </li>
         </ul>
       </div>
