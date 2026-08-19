@@ -3,6 +3,7 @@ import './App.css';
 import InfoMng0200 from './pages/InfoMng0200';
 import InfoMng0300 from './pages/InfoMng0300';
 import InfoMng0400 from './pages/InfoMng0400';
+import PrchsSlip0100 from './pages/PrchsSlip0100';
 
 function App() {
   const [activeMenu, setActiveMenu] = useState('INFO-MNG-0200');
@@ -15,6 +16,8 @@ function App() {
         return <InfoMng0300 />;
       case 'INFO-MNG-0400':
         return <InfoMng0400 />;
+      case 'PRCHS-SLIP-0100':
+        return <PrchsSlip0100 />;
       default:
         return <div>메뉴를 선택해주세요.</div>;
     }
@@ -45,7 +48,12 @@ function App() {
           >
             상품 등록 및 관리
           </li>
-          <li style={{ padding: '10px 0', borderBottom: '1px solid #444', color: '#888' }}>매입전표등록</li>
+          <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('PRCHS-SLIP-0100') }}
+            onClick={() => setActiveMenu('PRCHS-SLIP-0100')}
+          >
+            매입전표등록
+          </li>
         </ul>
       </div>
       <div style={{ flex: 1, backgroundColor: '#f4f4f9', padding: '20px', overflowY: 'auto' }}>
