@@ -10,12 +10,17 @@ import SysMenu0200 from './pages/SysMenu0200';
 import SysAuthrt0300 from './pages/SysAuthrt0300';
 import SlsSprt0300 from './pages/SlsSprt0300';
 import InfoMng0100 from './pages/InfoMng0100';
+import SysUser0100 from './pages/SysUser0100';
+import PrchsInq0200 from './pages/PrchsInq0200';
+import SlsInq0200 from './pages/SlsInq0200';
 
 function App() {
   const [activeMenu, setActiveMenu] = useState('INFO-MNG-0200');
 
   const renderContent = () => {
     switch (activeMenu) {
+      case 'SYS-USER-0100':
+        return <SysUser0100 />;
       case 'INFO-MNG-0100':
         return <InfoMng0100 />;
       case 'INFO-MNG-0200':
@@ -26,8 +31,12 @@ function App() {
         return <InfoMng0400 />;
       case 'PRCHS-SLIP-0100':
         return <PrchsSlip0100 />;
+      case 'PRCHS-INQ-0200':
+        return <PrchsInq0200 />;
       case 'SLS-SLIP-0100':
         return <SlsSlip0100 />;
+      case 'SLS-INQ-0200':
+        return <SlsInq0200 />;
       case 'SLS-SPRT-0300':
         return <SlsSprt0300 />;
       case 'DDLN-MNG-0100':
@@ -48,6 +57,12 @@ function App() {
       <div style={{ width: '250px', backgroundColor: '#282c34', color: 'white', padding: '20px' }}>
         <h2>PSA-DOCS</h2>
         <ul style={{ listStyleType: 'none', padding: 0 }}>
+          <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('SYS-USER-0100') }}
+            onClick={() => setActiveMenu('SYS-USER-0100')}
+          >
+            사용자 관리
+          </li>
           <li
             style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('INFO-MNG-0100') }}
             onClick={() => setActiveMenu('INFO-MNG-0100')}
@@ -79,10 +94,22 @@ function App() {
             매입전표등록
           </li>
           <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('PRCHS-INQ-0200') }}
+            onClick={() => setActiveMenu('PRCHS-INQ-0200')}
+          >
+            매입 내역 조회
+          </li>
+          <li
             style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('SLS-SLIP-0100') }}
             onClick={() => setActiveMenu('SLS-SLIP-0100')}
           >
             매출전표등록
+          </li>
+          <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('SLS-INQ-0200') }}
+            onClick={() => setActiveMenu('SLS-INQ-0200')}
+          >
+            매출 내역 조회
           </li>
           <li
             style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('SLS-SPRT-0300') }}
