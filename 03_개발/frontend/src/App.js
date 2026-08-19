@@ -4,6 +4,7 @@ import InfoMng0200 from './pages/InfoMng0200';
 import InfoMng0300 from './pages/InfoMng0300';
 import InfoMng0400 from './pages/InfoMng0400';
 import PrchsSlip0100 from './pages/PrchsSlip0100';
+import SlsSlip0100 from './pages/SlsSlip0100';
 
 function App() {
   const [activeMenu, setActiveMenu] = useState('INFO-MNG-0200');
@@ -18,6 +19,8 @@ function App() {
         return <InfoMng0400 />;
       case 'PRCHS-SLIP-0100':
         return <PrchsSlip0100 />;
+      case 'SLS-SLIP-0100':
+        return <SlsSlip0100 />;
       default:
         return <div>메뉴를 선택해주세요.</div>;
     }
@@ -53,6 +56,12 @@ function App() {
             onClick={() => setActiveMenu('PRCHS-SLIP-0100')}
           >
             매입전표등록
+          </li>
+          <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('SLS-SLIP-0100') }}
+            onClick={() => setActiveMenu('SLS-SLIP-0100')}
+          >
+            매출전표등록
           </li>
         </ul>
       </div>
