@@ -25,6 +25,9 @@ import StngMng0200 from './pages/StngMng0200';
 import StngMng0300 from './pages/StngMng0300';
 import DashBrd0100 from './pages/DashBrd0100';
 import TaxInv0100 from './pages/TaxInv0100';
+import BtlDps0100 from './pages/BtlDps0100';
+import SalsPrf0100 from './pages/SalsPrf0100';
+import HstryLog0100 from './pages/HstryLog0100';
 
 function App() {
   const [activeMenu, setActiveMenu] = useState('INFO-MNG-0200');
@@ -81,6 +84,12 @@ function App() {
         return <DashBrd0100 />;
       case 'TAX-INV-0100':
         return <TaxInv0100 />;
+      case 'BTL-DPS-0100':
+        return <BtlDps0100 />;
+      case 'SALS-PRF-0100':
+        return <SalsPrf0100 />;
+      case 'HSTRY-LOG-0100':
+        return <HstryLog0100 />;
       default:
         return <div>메뉴를 선택해주세요.</div>;
     }
@@ -190,6 +199,12 @@ function App() {
             매출처 지원품 관리
           </li>
           <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('SALS-PRF-0100') }}
+            onClick={() => setActiveMenu('SALS-PRF-0100')}
+          >
+            영업사원 실적 조회
+          </li>
+          <li
             style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('INVT-MNG-0100') }}
             onClick={() => setActiveMenu('INVT-MNG-0100')}
           >
@@ -208,6 +223,12 @@ function App() {
             재고 실사/조정
           </li>
           <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('BTL-DPS-0100') }}
+            onClick={() => setActiveMenu('BTL-DPS-0100')}
+          >
+            용기 보증금 관리
+          </li>
+          <li
             style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('DDLN-MNG-0100') }}
             onClick={() => setActiveMenu('DDLN-MNG-0100')}
           >
@@ -224,6 +245,12 @@ function App() {
             onClick={() => setActiveMenu('SYS-AUTHRT-0300')}
           >
             메뉴/버튼 권한 관리
+          </li>
+          <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('HSTRY-LOG-0100') }}
+            onClick={() => setActiveMenu('HSTRY-LOG-0100')}
+          >
+            변경 이력 조회
           </li>
           <li
             style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('STNG-COM-0100') }}
