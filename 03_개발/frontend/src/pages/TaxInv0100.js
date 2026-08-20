@@ -22,16 +22,16 @@ const TaxInv0100 = () => {
       <div style={{ backgroundColor: '#fff', padding: '20px', border: '1px solid #ddd', borderRadius: '4px', marginBottom: '20px' }}>
         <h3>발행 대상 조회</h3>
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-          <label>발행 일자</label>
+          <label>발행 일자:</label>
           <input type="date" defaultValue="2023-10-25" style={{ padding: '5px' }} />
-          <label>상태</label>
+          <label>상태:</label>
           <select style={{ padding: '5px' }}>
             <option>전체</option>
             <option>미발행</option>
             <option>발행성공</option>
             <option>발행실패</option>
           </select>
-          <button style={{ padding: '5px 15px', backgroundColor: '#6c757d', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>조회</button>
+          <button style={{ padding: '6px 12px', cursor: 'pointer' }}>조회</button>
         </div>
       </div>
 

@@ -103,7 +103,7 @@ const BndMng0100 = () => {
             <span style={{ fontWeight: 'bold' }}>최근 수금 내역</span>
             <div>
               <input type="month" defaultValue="2023-10" style={{ padding: '4px', marginRight: '5px' }} />
-              <button style={{ padding: '4px 8px' }}>조회</button>
+              <button style={{ padding: '6px 12px', cursor: 'pointer' }}>조회</button>
             </div>
           </div>
           <div style={{ flex: 1, overflowY: 'auto', padding: '10px' }}>

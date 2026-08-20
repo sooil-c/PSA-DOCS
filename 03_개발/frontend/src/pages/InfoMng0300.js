@@ -42,9 +42,9 @@ const InfoMng0300 = () => {
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
         <h2>매출처 등록 및 관리</h2>
         <div>
-          <button style={btnStyle}>신규</button>
-          <button style={btnStyle} onClick={handleSave}>저장</button>
-          <button style={btnStyle}>삭제</button>
+          <button style={{ padding: '8px 16px', marginRight: '10px', backgroundColor: '#2196F3', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>신규</button>
+          <button onClick={handleSave} style={{ padding: '8px 16px', marginRight: '10px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>저장</button>
+          <button style={{ padding: '8px 16px', backgroundColor: '#f44336', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>삭제</button>
           <button style={btnStyle}>변경이력 조회</button>
         </div>
       </div>

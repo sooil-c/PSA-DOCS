@@ -39,7 +39,7 @@ const InfoMng0100 = () => {
         <h2 style={{ margin: 0 }}>자사정보 등록 (INFO-MNG-0100)</h2>
         <div>
           <button style={{ padding: '8px 16px', marginRight: '10px', backgroundColor: '#607D8B', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>변경이력 조회</button>
-          <button onClick={handleSave} style={{ padding: '8px 16px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>저장</button>
+          <button onClick={handleSave} style={{ padding: '8px 16px', marginRight: '10px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>저장</button>
         </div>
       </div>
 

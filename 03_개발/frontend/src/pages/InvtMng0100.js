@@ -95,16 +95,16 @@ const InvtMng0100 = () => {
       </div>
 
       {/* Search Area */}
-      <div style={{ backgroundColor: '#fff', border: '1px solid #ddd', padding: '15px', borderRadius: '8px', marginBottom: '20px', display: 'flex', gap: '15px', alignItems: 'center', flexWrap: 'wrap' }}>
+      <div style={{ backgroundColor: '#fff', padding: '15px', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', marginBottom: '20px', display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap' }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <label style={{ fontWeight: 'bold', fontSize: '14px', whiteSpace: 'nowrap', flexShrink: 0, marginRight: '10px' }}>조회 기간</label>
+          <label style={{ marginRight: '10px', fontWeight: 'bold' }}>조회 기간:</label>
           <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} style={inputStyle} />
           <span style={{ margin: '0 10px' }}>~</span>
           <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} style={inputStyle} />
         </div>
 
         <div>
-          <label style={{ fontWeight: 'bold', fontSize: '14px', whiteSpace: 'nowrap', flexShrink: 0, marginRight: '10px' }}>수불 유형</label>
+          <label style={{ marginRight: '10px', fontWeight: 'bold' }}>수불 유형:</label>
           <select value={transactionType} onChange={(e) => setTransactionType(e.target.value)} style={inputStyle}>
             <option value="전체">전체</option>
             <option value="매입">매입</option>
@@ -116,7 +116,7 @@ const InvtMng0100 = () => {
         </div>
 
         <div>
-          <label style={{ fontWeight: 'bold', fontSize: '14px', whiteSpace: 'nowrap', flexShrink: 0, marginRight: '10px' }}>상품</label>
+          <label style={{ marginRight: '10px', fontWeight: 'bold' }}>상품:</label>
           <input
             type="text"
             placeholder="코드/상품명"
@@ -125,13 +125,10 @@ const InvtMng0100 = () => {
             style={inputStyle}
           />
         </div>
-        <button onClick={handleSearch} style={{ padding: '8px 24px', backgroundColor: '#2196F3', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', marginLeft: 'auto' }}>조회</button>
+        <button onClick={handleSearch} style={{ padding: '6px 12px', cursor: 'pointer' }}>조회</button>
       </div>
 
-            {/* 그리드 영역 */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '10px' }}>
-        <h3 style={{ margin: 0, fontSize: '16px' }}>수불 내역 목록</h3>
-      </div>
+      {/* Data Grid Area */}
       <div style={{ backgroundColor: '#fff', padding: '15px', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
         <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'center' }}>
           <thead>

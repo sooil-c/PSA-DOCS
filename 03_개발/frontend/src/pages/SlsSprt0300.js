@@ -55,7 +55,7 @@ const SlsSprt0300 = () => {
               <option value="DONE">완료</option>
             </select>
           </div>
-          <button style={{ padding: '6px 20px', backgroundColor: '#607D8B', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>조회</button>
+          <button style={{ padding: '6px 12px', cursor: 'pointer' }}>조회</button>
         </div>
       </div>
 

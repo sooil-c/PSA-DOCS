@@ -84,7 +84,7 @@ const StngMng0200 = () => {
                 <h3 style={{ margin: 0 }}>
                   설정 정보 <span style={{ color: '#2196f3' }}>({supplierList.find(s => s.code === selectedSupplier)?.name})</span>
                 </h3>
-                <button style={buttonStyle('#4caf50')} onClick={handleSave}>저장</button>
+                <button onClick={handleSave} style={{ padding: '8px 16px', marginRight: '10px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>저장</button>
               </div>
 
               <div style={formGroupStyle}>

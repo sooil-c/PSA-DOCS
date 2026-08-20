@@ -39,9 +39,9 @@ const BrdMng0100 = () => {
       </div>
 
       {/* Search Area */}
-      <div style={{ backgroundColor: '#fff', border: '1px solid #ddd', padding: '15px', borderRadius: '8px', marginBottom: '20px', display: 'flex', gap: '15px', alignItems: 'center', flexWrap: 'wrap' }}>
+      <div style={{ backgroundColor: '#fff', border: '1px solid #ddd', padding: '15px', borderRadius: '8px', marginBottom: '20px', display: 'flex', gap: '15px', alignItems: 'center' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <label style={{ fontWeight: 'bold', fontSize: '14px', whiteSpace: 'nowrap', flexShrink: 0 }}>구분</label>
+          <label style={{ fontWeight: 'bold', fontSize: '14px' }}>구분</label>
           <select value={boardType} onChange={(e) => setBoardType(e.target.value)} style={{ padding: '5px', borderRadius: '4px', border: '1px solid #ccc' }}>
             <option value="ALL">전체</option>
             <option value="GENERAL">일반</option>
@@ -50,7 +50,7 @@ const BrdMng0100 = () => {
         </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <label style={{ fontWeight: 'bold', fontSize: '14px', whiteSpace: 'nowrap', flexShrink: 0 }}>검색조건</label>
+          <label style={{ fontWeight: 'bold', fontSize: '14px' }}>검색조건</label>
           <select value={searchCondition} onChange={(e) => setSearchCondition(e.target.value)} style={{ padding: '5px', borderRadius: '4px', border: '1px solid #ccc' }}>
             <option value="TITLE">제목</option>
             <option value="CONTENT">내용</option>
@@ -66,13 +66,10 @@ const BrdMng0100 = () => {
           />
         </div>
 
-        <button style={{ padding: '8px 24px', backgroundColor: '#2196F3', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', marginLeft: 'auto' }}>조회</button>
+        <button style={{ padding: '6px 12px', cursor: 'pointer' }}>조회</button>
       </div>
 
       {/* Grid Area */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '10px' }}>
-        <h3 style={{ margin: 0, fontSize: '16px' }}>게시판 목록</h3>
-      </div>
       <div style={{ backgroundColor: '#fff', border: '1px solid #ddd', padding: '15px', borderRadius: '8px' }}>
         <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'center', fontSize: '14px' }}>
           <thead style={{ backgroundColor: '#f8f9fa' }}>
@@ -144,7 +141,7 @@ const BrdMng0100 = () => {
 
             <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
               <button onClick={handleCloseModal} style={{ padding: '8px 16px', backgroundColor: '#e0e0e0', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>취소</button>
-              <button onClick={handleSubmit} style={{ padding: '8px 16px', backgroundColor: '#1976d2', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>저장</button>
+              <button onClick={handleSubmit} style={{ padding: '8px 16px', marginRight: '10px', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>저장</button>
             </div>
           </div>
         </div>
