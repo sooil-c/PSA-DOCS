@@ -22,6 +22,9 @@ import InvtMng0100 from './pages/InvtMng0100';
 import InvtMng0300 from './pages/InvtMng0300';
 import StngCom0100 from './pages/StngCom0100';
 import StngMng0200 from './pages/StngMng0200';
+import StngMng0300 from './pages/StngMng0300';
+import DashBrd0100 from './pages/DashBrd0100';
+import TaxInv0100 from './pages/TaxInv0100';
 
 function App() {
   const [activeMenu, setActiveMenu] = useState('INFO-MNG-0200');
@@ -72,6 +75,12 @@ function App() {
         return <StngCom0100 />;
       case 'STNG-MNG-0200':
         return <StngMng0200 />;
+      case 'STNG-MNG-0300':
+        return <StngMng0300 />;
+      case 'DASH-BRD-0100':
+        return <DashBrd0100 />;
+      case 'TAX-INV-0100':
+        return <TaxInv0100 />;
       default:
         return <div>메뉴를 선택해주세요.</div>;
     }
@@ -84,6 +93,12 @@ function App() {
       <div style={{ width: '250px', backgroundColor: '#282c34', color: 'white', padding: '20px' }}>
         <h2>PSA-DOCS</h2>
         <ul style={{ listStyleType: 'none', padding: 0 }}>
+          <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('DASH-BRD-0100') }}
+            onClick={() => setActiveMenu('DASH-BRD-0100')}
+          >
+            대시보드
+          </li>
           <li
             style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('SYS-USER-0100') }}
             onClick={() => setActiveMenu('SYS-USER-0100')}
@@ -151,6 +166,12 @@ function App() {
             매출 내역 조회
           </li>
           <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('TAX-INV-0100') }}
+            onClick={() => setActiveMenu('TAX-INV-0100')}
+          >
+            세금계산서 관리
+          </li>
+          <li
             style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('BND-MNG-0100') }}
             onClick={() => setActiveMenu('BND-MNG-0100')}
           >
@@ -215,6 +236,12 @@ function App() {
             onClick={() => setActiveMenu('STNG-MNG-0200')}
           >
             매입처별 환경설정
+          </li>
+          <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('STNG-MNG-0300') }}
+            onClick={() => setActiveMenu('STNG-MNG-0300')}
+          >
+            매출처별 환경설정
           </li>
         </ul>
       </div>
