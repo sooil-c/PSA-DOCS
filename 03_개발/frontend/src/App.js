@@ -19,6 +19,9 @@ import InvtInq0200 from './pages/InvtInq0200';
 import DbtPrst0200 from './pages/DbtPrst0200';
 import BndPrst0200 from './pages/BndPrst0200';
 import InvtMng0100 from './pages/InvtMng0100';
+import InvtMng0300 from './pages/InvtMng0300';
+import StngCom0100 from './pages/StngCom0100';
+import StngMng0200 from './pages/StngMng0200';
 
 function App() {
   const [activeMenu, setActiveMenu] = useState('INFO-MNG-0200');
@@ -57,12 +60,18 @@ function App() {
         return <InvtMng0100 />;
       case 'INVT-INQ-0200':
         return <InvtInq0200 />;
+      case 'INVT-MNG-0300':
+        return <InvtMng0300 />;
       case 'DDLN-MNG-0100':
         return <DdlnMng0100 />;
       case 'SYS-MENU-0200':
         return <SysMenu0200 />;
       case 'SYS-AUTHRT-0300':
         return <SysAuthrt0300 />;
+      case 'STNG-COM-0100':
+        return <StngCom0100 />;
+      case 'STNG-MNG-0200':
+        return <StngMng0200 />;
       default:
         return <div>메뉴를 선택해주세요.</div>;
     }
@@ -172,6 +181,12 @@ function App() {
             현재고 조회
           </li>
           <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('INVT-MNG-0300') }}
+            onClick={() => setActiveMenu('INVT-MNG-0300')}
+          >
+            재고 실사/조정
+          </li>
+          <li
             style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('DDLN-MNG-0100') }}
             onClick={() => setActiveMenu('DDLN-MNG-0100')}
           >
@@ -188,6 +203,18 @@ function App() {
             onClick={() => setActiveMenu('SYS-AUTHRT-0300')}
           >
             메뉴/버튼 권한 관리
+          </li>
+          <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('STNG-COM-0100') }}
+            onClick={() => setActiveMenu('STNG-COM-0100')}
+          >
+            공통 환경설정
+          </li>
+          <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('STNG-MNG-0200') }}
+            onClick={() => setActiveMenu('STNG-MNG-0200')}
+          >
+            매입처별 환경설정
           </li>
         </ul>
       </div>
