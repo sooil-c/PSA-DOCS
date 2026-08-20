@@ -23,7 +23,8 @@ import InvtMng0300 from './pages/InvtMng0300';
 import StngCom0100 from './pages/StngCom0100';
 import StngMng0200 from './pages/StngMng0200';
 import StngMng0300 from './pages/StngMng0300';
-import DashBrd0100 from './pages/DashBrd0100';
+import SysPrst0100 from './pages/SysPrst0100';
+import NtcReg0100 from './pages/NtcReg0100';
 import TaxInv0100 from './pages/TaxInv0100';
 import BtlDps0100 from './pages/BtlDps0100';
 import SalsPrf0100 from './pages/SalsPrf0100';
@@ -80,8 +81,10 @@ function App() {
         return <StngMng0200 />;
       case 'STNG-MNG-0300':
         return <StngMng0300 />;
-      case 'DASH-BRD-0100':
-        return <DashBrd0100 />;
+      case 'SYS-PRST-0100':
+        return <SysPrst0100 />;
+      case 'NTC-REG-0100':
+        return <NtcReg0100 />;
       case 'TAX-INV-0100':
         return <TaxInv0100 />;
       case 'BTL-DPS-0100':
@@ -103,10 +106,16 @@ function App() {
         <h2>PSA-DOCS</h2>
         <ul style={{ listStyleType: 'none', padding: 0 }}>
           <li
-            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('DASH-BRD-0100') }}
-            onClick={() => setActiveMenu('DASH-BRD-0100')}
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('SYS-PRST-0100') }}
+            onClick={() => setActiveMenu('SYS-PRST-0100')}
           >
             대시보드
+          </li>
+          <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('NTC-REG-0100') }}
+            onClick={() => setActiveMenu('NTC-REG-0100')}
+          >
+            공지사항 등록
           </li>
           <li
             style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('SYS-USER-0100') }}
