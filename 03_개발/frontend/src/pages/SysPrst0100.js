@@ -3,7 +3,6 @@ import React from 'react';
 const SysPrst0100 = () => {
   return (
     <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
-      <h2>대시보드 (SYS-PRST-0100)</h2>
 
       {/* Notice Section */}
       <div style={{ backgroundColor: '#fff', border: '1px solid #ddd', padding: '15px', borderRadius: '8px', marginBottom: '20px', borderLeft: '5px solid #ff9800' }}>
@@ -61,10 +60,10 @@ const SysPrst0100 = () => {
             </div>
           </div>
           <div style={{ display: 'flex', justifyContent: 'space-around', marginTop: '10px', color: '#666', fontSize: '12px' }}>
-            <span>-3개월</span>
-            <span>-2개월</span>
-            <span>-1개월</span>
-            <span>당월</span>
+            <span>2023-07</span>
+            <span>2023-08</span>
+            <span>2023-09</span>
+            <span>2023-10</span>
           </div>
           <div style={{ marginTop: '10px', textAlign: 'right', fontSize: '12px' }}>
              <span style={{ display: 'inline-block', width: '10px', height: '10px', backgroundColor: '#bdbdbd', marginRight: '5px'}}></span>전년 동기
@@ -88,8 +87,8 @@ const SysPrst0100 = () => {
               </tr>
             </thead>
             <tbody>
-              <tr><td>P001</td><td>참이슬 후레쉬</td><td>360ml</td><td>S001</td><td>하이트진로</td><td style={{color: 'red'}}>45 Box</td></tr>
-              <tr><td>P002</td><td>카스</td><td>500ml</td><td>S002</td><td>오비맥주</td><td style={{color: 'red'}}>20 Box</td></tr>
+              <tr><td>10001</td><td>참이슬 후레쉬</td><td>360ml</td><td>10001</td><td>하이트진로</td><td style={{color: 'red'}}>45 Box</td></tr>
+              <tr><td>10002</td><td>카스</td><td>500ml</td><td>10002</td><td>오비맥주</td><td style={{color: 'red'}}>20 Box</td></tr>
             </tbody>
           </table>
         </div>
@@ -106,9 +105,9 @@ const SysPrst0100 = () => {
               </tr>
             </thead>
             <tbody>
-              <tr><td>P001</td><td>참이슬 후레쉬</td><td>360ml</td><td>S001</td><td>하이트진로</td></tr>
-              <tr><td>P005</td><td>진로 이즈백</td><td>360ml</td><td>S001</td><td>하이트진로</td></tr>
-              <tr><td>P002</td><td>카스</td><td>500ml</td><td>S002</td><td>오비맥주</td></tr>
+              <tr><td>10001</td><td>참이슬 후레쉬</td><td>360ml</td><td>10001</td><td>하이트진로</td></tr>
+              <tr><td>10005</td><td>진로 이즈백</td><td>360ml</td><td>10001</td><td>하이트진로</td></tr>
+              <tr><td>10002</td><td>카스</td><td>500ml</td><td>10002</td><td>오비맥주</td></tr>
             </tbody>
           </table>
         </div>
@@ -128,14 +127,14 @@ const SysPrst0100 = () => {
             </thead>
             <tbody>
               <tr>
-                <td style={{ border: '1px solid #ddd', padding: '10px' }}>C001</td>
+                <td style={{ border: '1px solid #ddd', padding: '10px' }}>10001</td>
                 <td style={{ border: '1px solid #ddd', padding: '10px' }}>이마트 성수점</td>
                 <td style={{ border: '1px solid #ddd', padding: '10px', textAlign: 'right' }}>₩ 2,500,000</td>
                 <td style={{ border: '1px solid #ddd', padding: '10px', textAlign: 'right' }}>₩ 15,000,000</td>
                 <td style={{ border: '1px solid #ddd', padding: '10px', textAlign: 'right', fontWeight: 'bold' }}>₩ 65,000,000</td>
               </tr>
               <tr>
-                <td style={{ border: '1px solid #ddd', padding: '10px' }}>C045</td>
+                <td style={{ border: '1px solid #ddd', padding: '10px' }}>10045</td>
                 <td style={{ border: '1px solid #ddd', padding: '10px' }}>백종원 프랜차이즈 본사</td>
                 <td style={{ border: '1px solid #ddd', padding: '10px', textAlign: 'right' }}>₩ 1,800,000</td>
                 <td style={{ border: '1px solid #ddd', padding: '10px', textAlign: 'right' }}>₩ 12,500,000</td>
