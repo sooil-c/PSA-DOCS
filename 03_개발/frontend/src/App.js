@@ -13,6 +13,9 @@ import InfoMng0100 from './pages/InfoMng0100';
 import SysUser0100 from './pages/SysUser0100';
 import PrchsInq0200 from './pages/PrchsInq0200';
 import SlsInq0200 from './pages/SlsInq0200';
+import DbtGive0100 from './pages/DbtGive0100';
+import BndMng0100 from './pages/BndMng0100';
+import InvtInq0200 from './pages/InvtInq0200';
 
 function App() {
   const [activeMenu, setActiveMenu] = useState('INFO-MNG-0200');
@@ -33,12 +36,18 @@ function App() {
         return <PrchsSlip0100 />;
       case 'PRCHS-INQ-0200':
         return <PrchsInq0200 />;
+      case 'DBT-GIVE-0100':
+        return <DbtGive0100 />;
       case 'SLS-SLIP-0100':
         return <SlsSlip0100 />;
       case 'SLS-INQ-0200':
         return <SlsInq0200 />;
+      case 'BND-MNG-0100':
+        return <BndMng0100 />;
       case 'SLS-SPRT-0300':
         return <SlsSprt0300 />;
+      case 'INVT-INQ-0200':
+        return <InvtInq0200 />;
       case 'DDLN-MNG-0100':
         return <DdlnMng0100 />;
       case 'SYS-MENU-0200':
@@ -100,6 +109,12 @@ function App() {
             매입 내역 조회
           </li>
           <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('DBT-GIVE-0100') }}
+            onClick={() => setActiveMenu('DBT-GIVE-0100')}
+          >
+            외상대금 지급 관리
+          </li>
+          <li
             style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('SLS-SLIP-0100') }}
             onClick={() => setActiveMenu('SLS-SLIP-0100')}
           >
@@ -112,10 +127,22 @@ function App() {
             매출 내역 조회
           </li>
           <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('BND-MNG-0100') }}
+            onClick={() => setActiveMenu('BND-MNG-0100')}
+          >
+            수금 등록 관리
+          </li>
+          <li
             style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('SLS-SPRT-0300') }}
             onClick={() => setActiveMenu('SLS-SPRT-0300')}
           >
             매출처 지원품 관리
+          </li>
+          <li
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('INVT-INQ-0200') }}
+            onClick={() => setActiveMenu('INVT-INQ-0200')}
+          >
+            현재고 조회
           </li>
           <li
             style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('DDLN-MNG-0100') }}
