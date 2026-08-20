@@ -67,9 +67,9 @@ const BndPrst0200 = () => {
       </div>
 
       {/* Search Area */}
-      <div style={{ backgroundColor: '#fff', padding: '15px', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', marginBottom: '20px', display: 'flex', gap: '20px', alignItems: 'center' }}>
+      <div style={{ backgroundColor: '#fff', border: '1px solid #ddd', padding: '15px', borderRadius: '8px', marginBottom: '20px', display: 'flex', gap: '15px', alignItems: 'center', flexWrap: 'wrap' }}>
         <div>
-          <label style={{ marginRight: '10px', fontWeight: 'bold' }}>기준 일자:</label>
+          <label style={{ fontWeight: 'bold', fontSize: '14px', whiteSpace: 'nowrap', flexShrink: 0, marginRight: '10px' }}>기준 일자</label>
           <input
             type="date"
             value={searchDate}
@@ -78,7 +78,7 @@ const BndPrst0200 = () => {
           />
         </div>
         <div>
-          <label style={{ marginRight: '10px', fontWeight: 'bold' }}>매출처:</label>
+          <label style={{ fontWeight: 'bold', fontSize: '14px', whiteSpace: 'nowrap', flexShrink: 0, marginRight: '10px' }}>매출처</label>
           <input
             type="text"
             placeholder="코드/매출처명"
@@ -87,10 +87,13 @@ const BndPrst0200 = () => {
             style={inputStyle}
           />
         </div>
-        <button style={buttonStyle('#2196f3')} onClick={handleSearch}>조회</button>
+        <button onClick={handleSearch} style={{ padding: '8px 24px', backgroundColor: '#2196F3', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', marginLeft: 'auto' }}>조회</button>
       </div>
 
-      {/* Data Grid Area */}
+            {/* 그리드 영역 */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '10px' }}>
+        <h3 style={{ margin: 0, fontSize: '16px' }}>미수금 현황 목록</h3>
+      </div>
       <div style={{ backgroundColor: '#fff', padding: '15px', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
         <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'center' }}>
           <thead>

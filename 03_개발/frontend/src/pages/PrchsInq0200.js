@@ -19,34 +19,33 @@ const PrchsInq0200 = () => {
       </div>
 
       {/* 상단 검색 영역 */}
-      <div style={{ padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd', borderRadius: '4px', marginBottom: '20px' }}>
-        <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', alignItems: 'center' }}>
-          <div>
-            <label style={{ fontWeight: 'bold', marginRight: '10px' }}>조회 기간:</label>
-            <input type="date" defaultValue="2023-10-01" style={{ padding: '6px', border: '1px solid #ccc', borderRadius: '4px' }} />
-            {' ~ '}
-            <input type="date" defaultValue="2023-10-31" style={{ padding: '6px', border: '1px solid #ccc', borderRadius: '4px' }} />
-          </div>
-          <div>
-            <label style={{ fontWeight: 'bold', marginRight: '10px' }}>매입처:</label>
-            <div style={{ display: 'inline-flex', gap: '5px' }}>
-              <input type="text" placeholder="코드/매입처명" style={{ padding: '6px', border: '1px solid #ccc', borderRadius: '4px' }} />
-              <button style={{ padding: '6px 12px', cursor: 'pointer' }}>검색</button>
-            </div>
-          </div>
-          <div>
-            <label style={{ fontWeight: 'bold', marginRight: '10px' }}>상품:</label>
-            <div style={{ display: 'inline-flex', gap: '5px' }}>
-              <input type="text" placeholder="코드/상품명" style={{ padding: '6px', border: '1px solid #ccc', borderRadius: '4px' }} />
-              <button style={{ padding: '6px 12px', cursor: 'pointer' }}>검색</button>
-            </div>
-          </div>
-          <button style={{ padding: '8px 24px', backgroundColor: '#2196F3', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', marginLeft: 'auto' }}>조회</button>
+      <div style={{ backgroundColor: '#fff', border: '1px solid #ddd', padding: '15px', borderRadius: '8px', marginBottom: '20px', display: 'flex', gap: '15px', alignItems: 'center', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <label style={{ fontWeight: 'bold', fontSize: '14px', whiteSpace: 'nowrap', flexShrink: 0 }}>조회 기간</label>
+          <input type="date" defaultValue="2023-10-01" style={{ padding: '6px', border: '1px solid #ccc', borderRadius: '4px' }} />
+          {' ~ '}
+          <input type="date" defaultValue="2023-10-31" style={{ padding: '6px', border: '1px solid #ccc', borderRadius: '4px' }} />
         </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <label style={{ fontWeight: 'bold', fontSize: '14px', whiteSpace: 'nowrap', flexShrink: 0 }}>매입처</label>
+          <div style={{ display: 'inline-flex', gap: '5px' }}>
+            <input type="text" placeholder="코드/매입처명" style={{ padding: '6px', border: '1px solid #ccc', borderRadius: '4px' }} />
+          </div>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <label style={{ fontWeight: 'bold', fontSize: '14px', whiteSpace: 'nowrap', flexShrink: 0 }}>상품</label>
+          <div style={{ display: 'inline-flex', gap: '5px' }}>
+            <input type="text" placeholder="코드/상품명" style={{ padding: '6px', border: '1px solid #ccc', borderRadius: '4px' }} />
+          </div>
+        </div>
+        <button style={{ padding: '8px 24px', backgroundColor: '#2196F3', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', marginLeft: 'auto' }}>조회</button>
       </div>
 
       {/* 그리드 영역 */}
-      <div style={{ flex: 1, backgroundColor: '#fff', border: '1px solid #ddd', borderRadius: '4px', overflowY: 'auto' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '10px' }}>
+        <h3 style={{ margin: 0, fontSize: '16px' }}>매입 내역 목록</h3>
+      </div>
+      <div style={{ flex: 1, backgroundColor: '#fff', border: '1px solid #ddd', borderRadius: '8px', overflowY: 'auto', padding: '15px' }}>
         <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'center', fontSize: '14px' }}>
           <thead style={{ backgroundColor: '#f5f5f5', position: 'sticky', top: 0, zIndex: 1 }}>
             <tr>

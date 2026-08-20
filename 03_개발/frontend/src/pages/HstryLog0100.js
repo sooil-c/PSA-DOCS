@@ -25,12 +25,12 @@ const HstryLog0100 = () => {
       <div style={{ backgroundColor: '#fff', padding: '20px', border: '1px solid #ddd', borderRadius: '4px', marginBottom: '20px' }}>
         <h3>조회 조건</h3>
         <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
-          <label>기간:</label>
+          <label>기간</label>
           <input type="date" value={searchParams.startDate} onChange={e => setSearchParams({...searchParams, startDate: e.target.value})} style={{ padding: '5px' }} />
           <span>~</span>
           <input type="date" value={searchParams.endDate} onChange={e => setSearchParams({...searchParams, endDate: e.target.value})} style={{ padding: '5px' }} />
 
-          <label>모듈 구분:</label>
+          <label>모듈 구분</label>
           <select value={searchParams.moduleName} onChange={e => setSearchParams({...searchParams, moduleName: e.target.value})} style={{ padding: '5px' }}>
             <option>전체</option>
             <option>자사정보</option>
@@ -40,12 +40,12 @@ const HstryLog0100 = () => {
             <option>사용자관리</option>
           </select>
 
-          <button onClick={handleSearch} style={{ padding: '6px 20px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>조회</button>
+          <button onClick={handleSearch} style={{ padding: '8px 24px', backgroundColor: '#2196F3', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', marginLeft: 'auto' }}>조회</button>
         </div>
       </div>
 
-      <div style={{ backgroundColor: '#fff', padding: '20px', border: '1px solid #ddd', borderRadius: '4px' }}>
-        <h3 style={{ marginBottom: '15px' }}>History Log</h3>
+      <div style={{ flex: 1, backgroundColor: '#fff', border: '1px solid #ddd', borderRadius: '8px', overflowY: 'auto', padding: '15px' }}>
+        <h3 style={{ marginBottom: '15px', margin: 0, fontSize: '16px' }}>변경 이력 목록</h3>
 
         <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'center', fontSize: '14px' }}>
           <thead style={{ backgroundColor: '#f8f9fa' }}>

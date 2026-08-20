@@ -26,10 +26,10 @@ const SalsPrf0100 = () => {
       <div style={{ backgroundColor: '#fff', padding: '20px', border: '1px solid #ddd', borderRadius: '4px', marginBottom: '20px' }}>
         <h3>조회 조건</h3>
         <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
-          <label>조회 월:</label>
+          <label>조회 월</label>
           <input type="month" value={searchMonth} onChange={e => setSearchMonth(e.target.value)} style={{ padding: '5px' }} />
 
-          <button onClick={handleSearch} style={{ padding: '6px 20px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>조회</button>
+          <button onClick={handleSearch} style={{ padding: '8px 24px', backgroundColor: '#2196F3', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer', marginLeft: 'auto' }}>조회</button>
         </div>
       </div>
 
