@@ -24,7 +24,7 @@ import StngCom0100 from './pages/StngCom0100';
 import StngMng0200 from './pages/StngMng0200';
 import StngMng0300 from './pages/StngMng0300';
 import SysPrst0100 from './pages/SysPrst0100';
-import NtcReg0100 from './pages/NtcReg0100';
+import BrdMng0100 from './pages/BrdMng0100';
 import TaxInv0100 from './pages/TaxInv0100';
 import BtlDps0100 from './pages/BtlDps0100';
 import SalsPrf0100 from './pages/SalsPrf0100';
@@ -83,8 +83,8 @@ function App() {
         return <StngMng0300 />;
       case 'SYS-PRST-0100':
         return <SysPrst0100 />;
-      case 'NTC-REG-0100':
-        return <NtcReg0100 />;
+      case 'BRD-MNG-0100':
+        return <BrdMng0100 />;
       case 'TAX-INV-0100':
         return <TaxInv0100 />;
       case 'BTL-DPS-0100':
@@ -112,10 +112,10 @@ function App() {
             대시보드
           </li>
           <li
-            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('NTC-REG-0100') }}
-            onClick={() => setActiveMenu('NTC-REG-0100')}
+            style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('BRD-MNG-0100') }}
+            onClick={() => setActiveMenu('BRD-MNG-0100')}
           >
-            공지사항 등록
+            게시판
           </li>
           <li
             style={{ padding: '10px 0', borderBottom: '1px solid #444', cursor: 'pointer', color: getMenuColor('SYS-USER-0100') }}
